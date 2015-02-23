@@ -15,18 +15,22 @@
 
     // ensure a valid object key
     function legalKey(string) {
-        if (!/^[a-z_$][0-9a-z_$]*$/gi.test(string) || keywordRegexp.test(string)) {
+        if(!/^[a-z_$][0-9a-z_$]*$/gi.test(string) || keywordRegexp.test(string)) {
             throw ('invalid object key' + string);
         };
+
         return string;
     }
     
     // recursive function to get a source string
     return function toSource(obj) {
-        if(obj === null || obj === undefined) {
+        if(obj === null) {
             return 'null';
         }
 
+        if (obj === undefined) {
+            return 'undefined';
+        }
         var type = typeof obj;
         if (type === "number" || type === "boolean" || type === "function" || obj instanceof RegExp) {
             return obj.toString();
@@ -37,7 +41,7 @@
         }
 
         if (typeof obj === 'string') {
-            return "'" + obj.replace("'", "\\'").replace('"', '\\"') + "'";
+            return "'" + obj.replace("'", "\\'") + "'";
         }
 
         if (obj instanceof Array) {
