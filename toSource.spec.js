@@ -1,6 +1,3 @@
-/// <reference path="../../../../../Scripts/require.js"/>
-/// <reference path="./toSource.js"/>
-
 describe('toSource', function () {
 
     // load toSource module
