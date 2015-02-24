@@ -3,14 +3,7 @@ describe('toSource', function () {
     // load toSource module
     var toSource;
     beforeEach(function (done) {
-        if(!toSource) {
-            require(['toSource'], function (toSourceModule) {
-                toSource = toSourceModule;
-                done();
-            });
-        } else {
-            done();
-        }
+        toSource = toSource || require('./toSource');
     });
 
     it('toSource is Loaded', function () {
