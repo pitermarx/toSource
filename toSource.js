@@ -1,5 +1,5 @@
 (function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
+    if (define && typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define([], factory);
     } else if (typeof exports === 'object') {
@@ -17,11 +17,11 @@
     function legalKey(string) {
         if(!/^[a-z_$][0-9a-z_$]*$/gi.test(string) || keywordRegexp.test(string)) {
             throw ('invalid object key' + string);
-        };
+        }
 
         return string;
     }
-    
+
     // recursive function to get a source string
     return function toSource(obj) {
         if(obj === null) {

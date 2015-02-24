@@ -3,3 +3,7 @@ node_js:
   - "0.11"
 before_script:
     - "npm i -g jasmine-node"
+    - "npm i coveralls"
+    - "npm i istanbul"
+after_success:
+    - "istanbul cover jasmine-node --captureExceptions toSource.spec.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
