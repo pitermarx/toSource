@@ -1,11 +1,7 @@
+// load toSource module
+var toSource = require('./toSource');
+
 describe('toSource', function () {
-
-    // load toSource module
-    var toSource;
-    beforeEach(function (done) {
-        toSource = toSource || require('./toSource');
-    });
-
     it('toSource is Loaded', function () {
         expect(toSource).toBeDefined();
         expect(typeof toSource).toBe('function');
