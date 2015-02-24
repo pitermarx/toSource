@@ -7,14 +7,13 @@ Supports node/CommonJS, AMD and global _this_ object (browser)
 
 #### Example CommonJS
 ```js
+// require
 var toSource = require('./toSource');
-toSource({a:1,b:false});
-// -> "{a:1,b:false}"
-```
-
-#### Adding to Object.prototype
-```js
+// (optional) add it to the Object prototype
 Object.prototype.toSource = function(){ return toSource(this); };
+var obj = {a:1,b:false};
+obj.toSource();
+// -> "{a:1,b:false}"
 ```
 
 [![Build Status](https://travis-ci.org/pitermarx/toSource.svg?branch=master)](https://travis-ci.org/pitermarx/toSource)
