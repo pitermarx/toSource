@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "test": "jasmine-node tests/*.spec.js"
+    "test": "jasmine-node *.spec.js"
   }
 }
