@@ -12,5 +12,10 @@ toSource({a:1,b:false});
 // -> "{a:1,b:false}"
 ```
 
+#### Adding to Object.prototype
+```js
+Object.prototype.toSource = function(){ return toSource(this); };
+```
+
 [![Build Status](https://travis-ci.org/pitermarx/toSource.svg?branch=master)](https://travis-ci.org/pitermarx/toSource)
 [![Coverage Status](https://coveralls.io/repos/pitermarx/toSource/badge.svg?branch=master)](https://coveralls.io/r/pitermarx/toSource?branch=master)
