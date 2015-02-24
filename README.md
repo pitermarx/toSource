@@ -5,7 +5,7 @@ Naive implementation of [Object.toSource](https://developer.mozilla.org/docs/Web
 
 Supports node/CommonJS, AMD and global _this_ object (browser)
 
-#### Usage
+#### Example CommonJS
 ```js
 var toSource = require('./toSource);
 toSource({a:1,b:false});
