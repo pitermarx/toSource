@@ -1,5 +1,27 @@
 {
+  "name": "toSource",
+  "version": "0.1",
+  "description": "Naive implementation of Object.toSource",
+  "author": "pitermarx",
   "scripts": {
     "test": "jasmine-node *.spec.js"
+  },
+  "main": "./toSource.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pitermarx/toSource"
+  },
+  "bugs": {
+    "url": "https://github.com/pitermarx/toSource/issues"
+  },
+  "keywords": [
+    "javascript",
+    "toSource"
+  ],
+  "devDependencies": {
+    "jasmine-node": "*",
+    "coveralls": "*",
+    "istanbul": "*"
   }
+  "license": "MIT"
 }
