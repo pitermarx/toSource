@@ -1,6 +1,6 @@
 {
   "name": "toSource",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Naive implementation of Object.toSource",
   "author": "pitermarx",
   "scripts": {
